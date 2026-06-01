@@ -808,9 +808,19 @@
             }
 
         .key-icon {
-            font-size: 1.6rem;
-            line-height: 1;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+            .key-icon img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+            }
 
         .key-label {
             font-family: 'JetBrains Mono', monospace;
@@ -1622,6 +1632,7 @@
                     </span>
                     <span class="key-label">${tool.label}</span>
                     <span class="key-tooltip">${tool.tip}</span>`;
+
                 if (tool.level === 'solid') key.style.boxShadow = '0 2px 12px rgba(0,255,136,0.08)';
                 rowEl.appendChild(key);
             });
