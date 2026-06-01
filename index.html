@@ -1617,10 +1617,11 @@
                 key.className = 'key';
                 key.style.borderBottomColor = levelColors[tool.level] + '66';
                 key.innerHTML = `
-          <span class="key-icon">${tool.icon}</span>
-          <span class="key-label">${tool.label}</span>
-          <span class="key-tooltip">${tool.tip}</span>
-        `;
+                    <span class="key-icon">
+                        <img src="${tool.icon}" alt="${tool.label}">
+                    </span>
+                    <span class="key-label">${tool.label}</span>
+                    <span class="key-tooltip">${tool.tip}</span>`;
                 if (tool.level === 'solid') key.style.boxShadow = '0 2px 12px rgba(0,255,136,0.08)';
                 rowEl.appendChild(key);
             });
